@@ -1,0 +1,14 @@
+import 'package:bank_mobile_app/features/auth/ui/screens/sign_in_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+class AppRoutes{
+  static Route<dynamic> onGenerateRouteSetting(RouteSettings settings){
+    late Widget route;
+    if(settings.name==SignInScreen.name){
+      route=const SignInScreen();
+    }
+    
+    return MaterialPageRoute(builder: (_)=> route);
+  }
+}
