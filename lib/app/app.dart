@@ -1,4 +1,5 @@
 import 'package:bank_mobile_app/app/app_routes.dart';
+import 'package:bank_mobile_app/app/theme_data.dart';
 import 'package:flutter/material.dart';
 
 class MobileBankingApp extends StatelessWidget {
@@ -10,6 +11,7 @@ class MobileBankingApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       onGenerateRoute: AppRoutes.onGenerateRouteSetting,
+      theme: appThemeData,
     );
   }
 }
