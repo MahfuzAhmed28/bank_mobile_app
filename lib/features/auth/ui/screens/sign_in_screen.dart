@@ -1,4 +1,6 @@
 import 'package:bank_mobile_app/app/app_colors.dart';
+import 'package:bank_mobile_app/features/auth/ui/screens/sign_up_screen.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -120,7 +122,8 @@ class _SignInScreenState extends State<SignInScreen> {
                       color: Color(0xFF94c9da),
                       decoration: TextDecoration.underline,
                       decorationColor: Color(0xFF94c9da),
-                    )
+                    ),
+                    recognizer: TapGestureRecognizer()..onTap=_onTapSignUpButton,
                   )
                 ]
               ),
@@ -135,5 +138,8 @@ class _SignInScreenState extends State<SignInScreen> {
     if(_formKey.currentState!.validate()){
 
     }
+  }
+  void _onTapSignUpButton(){
+    Navigator.pushReplacementNamed(context, SignUpScreen.name);
   }
 }
