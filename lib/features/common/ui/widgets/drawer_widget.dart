@@ -26,12 +26,14 @@ class DrawerWidget extends StatelessWidget {
             title: Text('Home'),
             onTap: (){
               Navigator.pop(context);
+
             },
           ),
           ListTile(
             leading: Icon(Icons.account_circle_outlined),
             title: Text('Profile'),
             onTap: (){
+              Navigator.pop(context);
               Navigator.pushNamed(context, ProfileScreen.name);
             },
           )
