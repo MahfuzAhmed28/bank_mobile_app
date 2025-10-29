@@ -41,7 +41,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Column _saveChangesFormField() {
+  Widget _saveChangesFormField() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -58,7 +58,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         TextFormField(
           controller: _nameTEController,
           decoration: InputDecoration(
-            hintText: 'MAHFUZ AHMED'
+            hintText: 'MAHFUZ AHMED',
+              contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10)
           ),
           validator: (String? value){
             if(value?.trim().isEmpty ?? true){
@@ -79,7 +80,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         TextFormField(
           controller: _bankAccountTEController,
           decoration: InputDecoration(
-              hintText: '00012  34567'
+              hintText: '00012  34567',
+              contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10)
           ),
           validator: (String? value){
             if(value?.trim().isEmpty ?? true){
@@ -100,7 +102,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         TextFormField(
           controller: _emailTEController,
           decoration: InputDecoration(
-              hintText: 'mahfuz@gmail.om'
+              hintText: 'mahfuz@gmail.com',
+              contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10)
           ),
           validator: (String? value){
             if(value?.trim().isEmpty ?? true){
@@ -121,7 +124,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         TextFormField(
           controller: _passwordTEController,
           decoration: InputDecoration(
-              hintText: '*******'
+              hintText: '*******',
+              contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10)
           ),
           validator: (String? value){
             if(value?.isEmpty ?? true){
@@ -142,7 +146,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         TextFormField(
           controller: _phoneNumberTEController,
           decoration: InputDecoration(
-              hintText: '01234567890'
+              hintText: '01234567890',
+              contentPadding: EdgeInsets.symmetric(vertical: 0,horizontal: 10)
           ),
           validator: (String? value){
             if(value?.trim().isEmpty ?? true){
@@ -164,7 +169,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           controller: _addressTEController,
           maxLines: 3,
           decoration: InputDecoration(
-              hintText: 'Sector-10; Uttara; Dhaka'
+              hintText: 'Sector-10; Uttara; Dhaka',
+              contentPadding: EdgeInsets.symmetric(vertical: 5,horizontal: 10)
           ),
           validator: (String? value){
             if(value?.trim().isEmpty ?? true){

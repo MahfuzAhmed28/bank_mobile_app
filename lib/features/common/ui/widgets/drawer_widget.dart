@@ -1,3 +1,5 @@
+import 'package:bank_mobile_app/features/add_card/ui/screens/add_card_screen.dart';
+import 'package:bank_mobile_app/features/home/ui/screens/home_screen.dart';
 import 'package:bank_mobile_app/features/profile/ui/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +28,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text('Home'),
             onTap: (){
               Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, HomeScreen.name);
 
             },
           ),
@@ -36,7 +39,15 @@ class DrawerWidget extends StatelessWidget {
               Navigator.pop(context);
               Navigator.pushNamed(context, ProfileScreen.name);
             },
-          )
+          ),
+          ListTile(
+            leading: Icon(Icons.credit_card),
+            title: Text('Add Card'),
+            onTap: (){
+              Navigator.pop(context);
+              Navigator.pushNamed(context, AddCardScreen.name);
+            },
+          ),
         ],
       ),
     );

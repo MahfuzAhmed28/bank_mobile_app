@@ -1,3 +1,4 @@
+import 'package:bank_mobile_app/features/add_card/ui/screens/add_card_screen.dart';
 import 'package:bank_mobile_app/features/auth/ui/screens/sign_in_screen.dart';
 import 'package:bank_mobile_app/features/auth/ui/screens/sign_up_screen.dart';
 import 'package:bank_mobile_app/features/home/ui/screens/home_screen.dart';
@@ -19,6 +20,9 @@ class AppRoutes{
     }
     else if(settings.name==ProfileScreen.name){
       route = const ProfileScreen();
+    }
+    else if(settings.name==AddCardScreen.name){
+      route = const AddCardScreen();
     }
     
     return MaterialPageRoute(builder: (_)=> route);
